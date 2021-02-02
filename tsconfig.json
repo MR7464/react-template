@@ -30,6 +30,7 @@
     "jest",
     "src/setupTests.ts",
     "config",
-    "src/*.js"
+    "src/*.js",
+    "src/utils/*.js"
   ]
 }

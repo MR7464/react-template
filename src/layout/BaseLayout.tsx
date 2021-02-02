@@ -5,8 +5,8 @@ import {
   MenuFoldOutlined,
 } from "@ant-design/icons";
 import "./index.less";
-import logo from "../asset/imgs/logo.png";
-import widthlogo from "../asset/imgs/width-logo.png";
+import logo from "../assets/imgs/logo.png";
+import widthlogo from "../assets/imgs/width-logo.png";
 import routes from "../routes/routes-config";
 
 const { Header, Sider, Content } = Layout;
