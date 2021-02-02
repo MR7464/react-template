@@ -1,25 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import BaseLayout from "./layout/BaseLayout";
+import { withRouter } from "react-router-dom";
+import Router from './routes'
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BaseLayout {...props}><Router /></BaseLayout>
   );
 }
 
-export default App;
+export default withRouter(App);
