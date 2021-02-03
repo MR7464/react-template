@@ -1,9 +1,9 @@
 import local from './local'
 import qs from 'qs'
-import { Toast } from 'vant'
+// import { Toast } from 'antd'
 import axios from 'axios'
 
-const baseURL = process.env.NODE_ENV
+const baseURL = process.env.APP_baseURL;
 const setting = require('./../../package.json')
 const instance = axios.create({
   baseURL,
@@ -21,7 +21,7 @@ instance.interceptors.request.use(
     return config
   },
   function(error) {
-    Toast.fail('网络错误')
+    // Toast.fail('网络错误')
     // 对请求错误做些什么
     return Promise.reject(error)
   }
@@ -62,7 +62,7 @@ function request(url, params, type, method) {
   return instance(config)
 }
 
-export default {
+const http = {
   get: (url, params, type = 'json') => {
     return request(url, params, type, 'get')
   },
@@ -76,3 +76,5 @@ export default {
     return request(url, params, type, 'delete')
   }
 }
+
+export default http;
